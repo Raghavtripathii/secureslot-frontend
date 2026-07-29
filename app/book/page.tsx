@@ -57,14 +57,14 @@ export default function BookPage() {
         <select
           value={doctorId}
           onChange={(e) => setDoctorId(e.target.value)}
-          className="border rounded px-3 py-2"
-        >
-          <option value="">Select a doctor</option>
+          className="border rounded px-3 py-2 text-black bg-white"
+          >
+          <option value="" className="text-black bg-white">Select a doctor</option>
           {doctors?.map((d) => (
-            <option key={d.id} value={d.id}>
-              Dr. {d.full_name} — {d.specialty}
+            <option key={d.id} value={d.id} className="text-black bg-white">
+              {d.full_name} — {d.specialty}
             </option>
-          ))}
+            ))}
         </select>
         <input
           type="datetime-local"
